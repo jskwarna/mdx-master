@@ -1,0 +1,10 @@
+var rest0response =  _REST.responses[0]["info"]["http_code"]; //
+var rss_xml = _REST.responses[0].body;
+var amount_of_items_to_display = "%globals_asset_metadata_rss.items.amount%";
+
+var outputHtml = "";
+if (rest0response === 200){
+   outputHtml = e_prints.init(rss_xml, amount_of_items_to_display);	
+}
+
+print(outputHtml);
